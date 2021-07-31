@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: #00A79F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.child{
+    width:28%;
+    min-height:60vh;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 5px 0px 12px rgba(17, 13, 13, 0.4),0px 5px 12px rgba(17, 13, 13, 0.4);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h2{
+    background-color: #AC00CB;
+    margin-top: 40px;
+    padding-bottom: 3px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-.App-link {
-  color: #61dafb;
+.num{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
+.num p{ 
+    width: 50px;
+    height: 50px;
+    background-color: #AC00CB;
+    vertical-align: center;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 10px;
+    padding-top: 3px;
+    font-weight: bold;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    background-color: #AC00CB;
+    color:#fff;
+    padding: 8px 18px 8px 18px;
+    margin-top: 50px;
+    border-radius: 10px;
+    border:none;
+    outline:none;
+    cursor: pointer;
+    font-size: 18px;
+}
+.inc:hover{
+    background-color:#63AB00 ;
+}
+.dec:hover{
+    background-color: #FF0000;
+}
+/* ---------------media Query-------------- */
+/* --------------- mobile size--------------*/
+ @media screen and (max-width:768px){
+    .child{
+        min-width:70%;
+        min-height:50vh;
+    }
+    h2{
+        font-size: 27px;
+    }
+    button{
+        padding: 7px 17px 7px 17px; 
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+/* ---------------small size--------------------- */
+@media screen and (max-width:467px){
+    .child{
+        min-width:80%;
+        min-height:45vh;
+    }
+    h2{
+        font-size: 22px;
+    }
+    button{
+        padding: 7px 16px 7px 16px; 
+    }
+
+}
+/* ---------------extra small size--------------- */
+@media screen and (max-width:320px){
+    .child{
+        width:75%;
+        min-height:50vh;
+    }
+    h2{
+        font-size: 20px;
+    }
+    button{
+        padding: 6px 16px 6px 16px; 
+    }
 }
